@@ -1,0 +1,100 @@
+*,
+*::after,
+*::before {
+    /* so that size of elemnt represent their total sizethat is the part enclosed in their border */
+    box-sizing: border-box;
+
+    /* To prevent element taking their default values of these and cause unexpected behviour */
+    padding: 0;
+    margin: 0;
+	transition: 0.3s;
+}
+
+body {
+    background: #0af;
+    font-family: poppins, sans-serif;
+    /* Google fonts include in html */
+}
+
+
+.container {
+    width: 360px;
+
+	/* Center the container */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.42);
+
+    padding: 24px;
+}
+
+.text {
+    text-transform: uppercase;
+    font-size: 24px;
+}
+
+/* see css selecter based on attributes */
+input[type=checkbox], span.check {
+    position: absolute;
+	/* Same as padding */
+    top: 24px;
+    right: 24px;
+
+	/* Same height as text ctrl+shift+I */
+    width: 29px;
+    height: 29px;
+}
+
+input[type=checkbox] {
+	/* To keep it over span.check so that */
+	/* it is clickable */
+	z-index: 2;
+	/* Make checkbox invisible */
+	opacity: 0;
+
+	cursor: pointer;
+}
+span.check {
+	z-index: 1;
+	background: #0f7;
+}
+
+/* see sibling selector css */
+input[type=checkbox]:checked~span.check {
+	background: #f07;
+}
+
+.content {
+	/* Max height works with transition as */
+	/* normal property is fit content */
+	max-height: 0;
+	overflow: hidden;
+}
+input[type=checkbox]:checked~.content {
+	/* Transition is done from value to value */
+	/* hence value for height is necessary */
+	/* setting height is tedious and in-flexible */
+	/* max-height solves that */
+	max-height: 240px;
+
+	padding-top: 24px;
+}
+
+ul {
+    list-style: none;
+}
+li {
+    padding: 9px;
+    border-bottom: 2px solid #ddd;
+    text-transform: capitalize;
+    font-size: 16px;
+}
+
+li:last-child {
+    border: none;
+}
