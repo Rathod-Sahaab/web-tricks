@@ -1,0 +1,65 @@
+	/* select all element even psuedo elements */
+
+	*,
+	*::after,
+	*::before {
+	    /* so that size of elemnt represent their total sizethat is the part enclosed in their border */
+	    box-sizing: border-box;
+
+	    /* To prevent element taking their default values of these and cause unexpected behviour */
+	    padding: 0;
+	    margin: 0;
+	}
+
+	body {
+	    background: #0f7;
+	    font-family: poppins, sans-serif;
+	    /* Google fonts include in html */
+	}
+
+	.container {
+	    width: 360px;
+	    position: absolute;
+	    top: 50%;
+	    left: 50%;
+	    transform: translate(-50%, -50%);
+	}
+
+	.visible,
+	.hover {
+	    background: #fff;
+	    padding: 24px;
+
+		border-radius: 5px;
+		box-shadow: 5px 5px 10px rgba(0,0,0,0.42);
+	}
+
+	.heading {
+	    font-size: 36px;
+	    font-weight: 600;
+	    border-bottom: 1px dashed grey;
+	}
+
+	.summary {
+	    padding-top: 16px;
+	}
+
+	.summary::first-letter,
+	.hover::first-letter {
+	    text-transform: uppercase;
+	}
+
+	.hover {
+		position: absolute;
+		bottom: -56px;
+		left: 50%;
+		transform : translateX(-50%);
+		opacity:0;
+		transition: 0.3s;
+		width: 93%;
+	}
+
+	.visible:hover .hover {
+		opacity:1;
+		bottom: -21px;
+	}
