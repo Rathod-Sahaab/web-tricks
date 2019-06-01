@@ -1,0 +1,103 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+	transition: 0.5s;
+}
+a {
+	color: #f33;
+	text-decoration: none;
+}
+body {
+	background: #333;
+	background-size: cover;
+	background-position: center;
+	width: 100vw;
+	height: 100vh;
+    font-family: 'Monserrat', sans-serif;
+    color: #fff;
+}
+header {
+    display: flex;
+	flex-wrap: wrap;
+    text-transform: uppercase;
+    font-weight: 600;
+    padding: 2em;
+    justify-content: space-between;
+	align-items: center;
+}
+
+
+ul {
+    list-style: none;
+}
+
+ul li, #menu-btn{
+    display: inline-block;
+    border-radius: 5px;
+    padding: 0.7em;
+    margin: 0 0.7em;
+}
+#menu-btn {
+	display: none;
+	cursor: pointer;
+}
+#menu-btn:hover {
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.42);
+}
+
+ul li.active, ul li.active:hover, #menu-btn {
+    background: #fff;
+    color: #333;
+}
+
+ul li:hover {
+	color: #f33;
+}
+#credit {
+	font-size: 1.5vw;
+
+	background: #fff;
+	padding: 1em;
+
+	border-radius: 3vh 3vh 0 0;
+
+	color: #333;
+
+	position: fixed;
+	bottom: 0;
+	left: 50%;
+	transform: translateX(-50%);
+
+	box-shadow: 0 0 11vh rgba(0, 0, 0, 0.42);
+}
+
+@media screen and (max-width: 810px) {
+	#menu-btn {
+		display: block;
+	}
+	header ul {
+		flex: 100%;
+	}
+	ul {
+		margin-top: 1em;
+		max-height: 210px;
+		overflow: hidden;
+	}
+	ul li {
+		display: block;
+		border-radius: 0;
+	}
+
+	ul.collapsed {
+		max-height: 0;
+	}
+	
+	#credit {
+		text-align: center;	
+		font-size: 16px;
+	}
+}
