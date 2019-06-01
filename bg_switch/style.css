@@ -37,13 +37,13 @@ ul {
 
 ul li, #menu-btn{
     display: inline-block;
+	cursor: pointer;
     border-radius: 5px;
     padding: 0.7em;
     margin: 0 0.7em;
 }
 #menu-btn {
 	display: none;
-	cursor: pointer;
 }
 #menu-btn:hover {
 	box-shadow: 0 0 10px rgba(0, 0, 0, 0.42);
