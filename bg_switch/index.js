@@ -46,7 +46,7 @@ for (var i = 0; i < natures.length; ++i) {
 function refresh() {
   currently_active.classList.add('active');
 
-  body.style.backgroundImage = 'url(\'' + currently_active.dataset.src + '\')';
+  body.style.backgroundImage = 'url(' + currently_active.dataset.src + ')';
   // See data attributes in HTML
   credit.innerHTML = credits[currently_active.dataset.credit];
 }
