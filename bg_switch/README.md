@@ -1,4 +1,6 @@
 # Background Switcher
+A depiction of Chakra natures inspired by [Naruto](https://en.wikipedia.org/wiki/Naruto), to demonstrate use of javascript in event handling.
+
 It uses features like `resource preloading`, where images are preloaded to avoid their inavailabilty when need arises.
 
 It also features `data attributes` for code flexibity
